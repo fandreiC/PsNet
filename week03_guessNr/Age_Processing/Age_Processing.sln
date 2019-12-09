@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Age_Processing", "Age_Processing.csproj", "{25EAEC31-5938-4E4F-B9C8-CB1D283C7D90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringPlay", "..\StringPlay\StringPlay.csproj", "{52DF996A-F921-4635-B99F-0564D9798B4E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{25EAEC31-5938-4E4F-B9C8-CB1D283C7D90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25EAEC31-5938-4E4F-B9C8-CB1D283C7D90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25EAEC31-5938-4E4F-B9C8-CB1D283C7D90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25EAEC31-5938-4E4F-B9C8-CB1D283C7D90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52DF996A-F921-4635-B99F-0564D9798B4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52DF996A-F921-4635-B99F-0564D9798B4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52DF996A-F921-4635-B99F-0564D9798B4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52DF996A-F921-4635-B99F-0564D9798B4E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54A2FA25-82B8-43BE-BACF-6C0D1398D9A4}
+	EndGlobalSection
+EndGlobal
