@@ -12,12 +12,14 @@ namespace UserPostsApp
         public Dictionary<User, List<Post>> MyBoard { get; set; }
         public List<User> MyUsers { get; set; }
         public List<Post> MyPosts { get; set; }
+        public List<Account> MyAccounts { get; set; }
 
         public CommonBoard()
         {
             this.MyUsers = new List<User>();
             this.MyPosts = new List<Post>();
-            MyBoard = new Dictionary<User, List<Post>>();
+            this.MyBoard = new Dictionary<User, List<Post>>();
+            this.MyAccounts = new List<Account>();
         }
 
         public void InsertPost(Post message)
@@ -70,6 +72,29 @@ namespace UserPostsApp
         {
             User user = MyUsers.FirstOrDefault(u => u.UserId == id);
             return user;
+        }
+
+        public void CreateAccount(User user)
+        {
+            int a = MyAccounts.FindIndex(f => f.UserName == user.FullName);
+            if (a < 0)
+            {
+                MyAccounts.Add(new Account(user));
+            }
+        }
+        public void PrintAccounts()
+        {
+            Console.WriteLine("Accounts: ");
+            foreach (var account in MyAccounts)
+            {
+                Console.WriteLine($" {account.UserName} , {account.Email}");
+            }
+        }
+        public void PostMessage(User user, string message)
+        {
+            CreateAccount(user);
+            Post post = new Post(user, message);
+            MyPosts.Add(post);
         }
 
 

@@ -3,7 +3,7 @@ using UserPostsLibrary;
 
 namespace UserPostsApp
 {
-       class AppManager
+    class AppManager
     {
         static void Main(string[] args)
         {
@@ -25,6 +25,20 @@ namespace UserPostsApp
             Console.WriteLine();
             board.DisplayAllPostsChronologically();
             Console.WriteLine();
+            board.DisplayPostUsingIComparable();
+
+
+            board.CreateAccount(user01);
+            board.CreateAccount(user02);
+            string message01 = " New message From user01 with account";
+            string message02 = " New message From user02 with account ";
+            string message03 = " New message From user03 with account(1) ";
+            string message04 = " New message From user03 with account(2) ";
+            board.PostMessage(user01, message01);
+            board.PostMessage(user02, message02);
+            board.PostMessage(user03, message03);
+            board.PostMessage(user03, message04);
+            board.PrintAccounts();
             board.DisplayPostUsingIComparable();
 
             Console.ReadKey();

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace UserPostsLibrary
 {
-       public class User
+    public class User
     {
-        private static int userId=100;
+        private static int userId = 100;
         public int UserId { get; set; }
         public List<int> PostsId { get; set; }
         public string FirstName { get; set; }
@@ -20,8 +20,9 @@ namespace UserPostsLibrary
             this.FullName = FirstName + " " + LastName;
             this.Birthday = DateTime.Now.AddYears(-20);
             this.UserId = ++userId;
-        }        
-        public User(string name):this(name," - ", DateTime.Now.AddYears(-20))  { }
+            this.Email = "asd@PentaStagiu.ro";
+        }
+        public User(string name) : this(name, " - ", DateTime.Now.AddYears(-20)) { }
         public User(string FName, string LName, DateTime birthDay)
         {
             this.FirstName = FName;
@@ -29,6 +30,7 @@ namespace UserPostsLibrary
             this.FullName = FirstName + " " + LastName;
             this.Birthday = birthDay;
             this.UserId = ++userId;
+            this.Email = "asd@PentaStagiu.ro";
         }
         public void PrintUser()
         {
