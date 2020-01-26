@@ -7,16 +7,16 @@ namespace Restaurant
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello Restaurant!");
 
             TakeOrder();
+
             Console.ReadKey();
         }
 
         public static void TakeOrder()
         {
             Order order1 = new Order();
-
         }
     }
 }

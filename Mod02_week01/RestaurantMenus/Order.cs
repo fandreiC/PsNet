@@ -6,10 +6,18 @@ namespace RestaurantMenus
 {
     public class Order
     {
-        VegBurger vburger = new VegBurger();
+        List<IDrink> drinks = new List<IDrink>();
 
-        Burger burger = new Burger();
-
+        List<IFastFood> foods = new List<IFastFood>();
         
+        internal void AddFood(IFastFood food)
+        {
+            foods.Add(food);
+        }
+        internal void AddDrink(IDrink drink)
+        {
+            drinks.Add(drink);
+        }
     }
+
 }
