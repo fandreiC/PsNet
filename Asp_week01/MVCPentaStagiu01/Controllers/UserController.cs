@@ -12,7 +12,8 @@ namespace MVCPentaStagiu01.Controllers
         // GET: User
         public ActionResult Index()
         {
-            return RedirectToAction("Details");
+            return View();
+            //return RedirectToAction("Details");
         }
 
         [HttpGet]
@@ -40,8 +41,27 @@ namespace MVCPentaStagiu01.Controllers
             {
                 return View();
             }
-            return RedirectToAction("Index");
-            
+            return RedirectToAction("Index");            
+        }
+
+        [HttpGet]
+        public ActionResult List()
+        {
+            UserViewModel userViewModel1 = new UserViewModel
+            {
+                Age = 45,
+                FirstName = "Tom"
+            };
+            UserViewModel userViewModel2 = new UserViewModel
+            {
+                Age = 72,
+                FirstName = "Jim"
+            };
+
+            List<UserViewModel> users = new List<UserViewModel>
+            { userViewModel1,userViewModel2};
+
+            return View(users);
         }
 
     }
