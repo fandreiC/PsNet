@@ -1,9 +1,9 @@
 ﻿@model MVCPentaStagiu01.Models.UserViewModel
 
 @{
-    ViewBag.Title = "View";
+    ViewBag.Title = "View User Details";
 }
-
+@Html.Partial("_Greeting",model:Model);
 <h2>View</h2>
 
 <div>
@@ -26,9 +26,18 @@
             @Html.DisplayFor(model => model.Age)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Create", "Create", new { /* id = Model.PrimaryKey */ }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Create new user", "Create", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "List") |
+    @Html.ActionLink("Back to Home", "Index")
 </p>

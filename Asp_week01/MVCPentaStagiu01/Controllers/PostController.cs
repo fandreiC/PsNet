@@ -22,7 +22,6 @@ namespace MVCPentaStagiu01.Controllers
         {
             PostViewModel postViewModel = new PostViewModel
             {
-                Id = 1,
                 TimeOfPosting = DateTime.Now,
                 Message = " THis is post nr 1",
                 PostType = PostType.Text,
@@ -31,7 +30,6 @@ namespace MVCPentaStagiu01.Controllers
             };
             PostViewModel postViewModel2 = new PostViewModel
             {
-                Id = 2,
                 TimeOfPosting = DateTime.Now,
                 Message = " THis is post nr 2",
                 PostType = PostType.Photo,
@@ -66,8 +64,7 @@ namespace MVCPentaStagiu01.Controllers
         public ActionResult List()
         {
             PostViewModel postViewModel = new PostViewModel
-            {
-                Id = 1,
+            {                
                 TimeOfPosting = DateTime.Now,
                 Message = " THis is post nr 1",
                 PostType = PostType.Text,
@@ -76,16 +73,22 @@ namespace MVCPentaStagiu01.Controllers
             };
             PostViewModel postViewModel2 = new PostViewModel
             {
-                Id = 2,
                 TimeOfPosting = DateTime.Now,
                 Message = " THis is post nr 2",
                 PostType = PostType.Photo,
                 IsSticky = false,
                 Priority = 2
             };
+            PostViewModel postViewModel3 = new PostViewModel
+            {
+                TimeOfPosting = DateTime.Now,
+                Message = " THis is post nr 3",
+                PostType = PostType.Photo,
+                IsSticky = true                
+            };
 
             IEnumerable<PostViewModel> posts = new List<PostViewModel>
-            {     postViewModel ,  postViewModel2     };
+            {     postViewModel ,  postViewModel2   ,postViewModel3  };
 
             return View(posts);
         }
